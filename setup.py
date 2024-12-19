@@ -2,9 +2,9 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)  # Використовуємо BCM нумерацію
-GPIO.setup(1, GPIO.OUT)  # Налаштовуємо пін 1 як вихід
+GPIO.setup(18, GPIO.OUT)  # Налаштовуємо пін 18 як вихід для PWM
 
-pwm = GPIO.PWM(1, 50)  # PWM сигнал з частотою 50 Гц
+pwm = GPIO.PWM(18, 50)  # PWM сигнал з частотою 50 Гц
 pwm.start(0)  # Початковий скважинний цикл 0%
 
 try:
